@@ -1,0 +1,163 @@
+/* ============================================================
+   Reset and base
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #8e0000;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* ============================================================
+   Forms and buttons
+   ============================================================ */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+button {
+  background-color: #0ba184;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  width: auto;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #088a70;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   Status messages — success and error distinct
+   ============================================================ */
+#status {
+  min-height: 1.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+#status.success {
+  color: #0a7d63;
+}
+
+#status.error {
+  color: #b00020;
+}
+
+/* ============================================================
+   Notes list
+   ============================================================ */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#notes-list li {
+  background: #ffffe6;
+  border-left: 4px solid #0ba184;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+#notes-list h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
+
+#notes-list p {
+  margin: 0 0 8px 0;
+}
+
+#notes-list .delete-btn {
+  background-color: #8e0000;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+#notes-list .delete-btn:hover:not(:disabled) {
+  background-color: #6b0000;
+}
+
+.empty-state {
+  color: #777;
+  font-style: italic;
+}
+
+/* ============================================================
+   Small screens
+   ============================================================ */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 8px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
