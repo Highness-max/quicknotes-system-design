@@ -114,7 +114,7 @@ async function loadNotes() {
    always responds with id: 101, because it does not really save
    posts. See https://jsonplaceholder.typicode.com/guide/.
    ------------------------------------------------------------ */
-   
+
 /* ------------------------------------------------------------
    POST — Create a note
    ------------------------------------------------------------ */
@@ -148,6 +148,16 @@ async function createNote(title, body) {
   }
 }
 
+/* ------------------------------------------------------------
+   DELETE — Remove a note
+   JSONPlaceholder responds with 200 for any DELETE /posts/:id,
+   but does not actually remove the resource. Our client treats
+   a successful response as "the user wants this gone", so we
+   remove the <li> from the DOM. If the page is refreshed, the
+   server will still return the original 10 posts. This is
+   expected and documented for clarity.
+   ------------------------------------------------------------ */
+   
 /* ------------------------------------------------------------
    DELETE — Remove a note
    JSONPlaceholder does not really delete posts, so we treat the
