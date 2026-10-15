@@ -110,6 +110,13 @@ async function loadNotes() {
 
 /* ------------------------------------------------------------
    POST — Create a note
+   Validation happens in the form submit handler. JSONPlaceholder
+   always responds with id: 101, because it does not really save
+   posts. See https://jsonplaceholder.typicode.com/guide/.
+   ------------------------------------------------------------ */
+   
+/* ------------------------------------------------------------
+   POST — Create a note
    ------------------------------------------------------------ */
 async function createNote(title, body) {
   submitBtn.disabled = true;
